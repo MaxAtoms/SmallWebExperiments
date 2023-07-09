@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <MudText Typo="Typo.h3" GutterBottom="true">Hello there</MudText>
+        <MudText Class="mb-8">Welcome to your new app, please login first.</MudText>
+    </NotAuthorized>
+    <Authorized>
+        <MudText Typo="Typo.h3" GutterBottom="true">Hello @context.User.Identity.Name</MudText>
+        <MudText Class="mb-8">Welcome to your new app.</MudText>
+    </Authorized>
+</AuthorizeView>
+<MudAlert Severity="Severity.Normal">You can find documentation and examples on our website here: <MudLink Href="https://mudblazor.com" Typo="Typo.body2" Color="Color.Inherit"><b>www.mudblazor.com</b></MudLink></MudAlert>

@@ -1,0 +1,4 @@
+appsettings.development.json
+bin/**
+obj/**
+.idea
